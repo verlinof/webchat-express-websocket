@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <h1>Webchat</h1>
+    <h1 class="title">Webchat</h1>
     <div class="main">
       <div class="name">
         <span><i class="fa-solid fa-user"></i></span>
@@ -40,14 +40,12 @@
       </ul>
 
       <form class="message-form" id="message-form">
-        <input type="text" id="message-input" />
-        <div class="v-divider"></div>
-        <button type="submit">
+        <input type="text" class="message-input" id="message-input" />
+        <button class="send-button" type="submit">
           Send <i class="fa-solid fa-paper-plane"></i>
         </button>
       </form>
-
-      <h3 class="clients-total" id="client-total">Total clients: 2</h3>
     </div>
+    <h3 class="clients-total" id="client-total">Total clients: 2</h3>
   </body>
 </html>
