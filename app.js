@@ -37,6 +37,10 @@ function onConnected(socket) {
     socket.broadcast.emit("chat-message", data)
   })
 
+  socket.on("feedback", (data) => {
+    socket.broadcast.emit("feedback", data)
+  })
+
   // Error handler
   socket.on("error", (error) => {
     console.error("Socket error:", error);
