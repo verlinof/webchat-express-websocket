@@ -6,19 +6,6 @@ const nameInput = document.getElementById('name-input')
 const messageForm = document.getElementById('message-form')
 const messageInput = document.getElementById('message-input')
 
-function sendMessage() {
-  console.log(messageInput.value)
-  const data = {
-    name: nameInput.value,
-    message: messageInput.value,
-    dateTime: new Date()
-  }
-
-  socket.emit('message', data);
-  addMessageToUi(true, data);
-  messageInput.value = '';
-}
-
 socket.on('chat-message', (data) => {
   console.log(data);
   addMessageToUi(false, data);
@@ -50,6 +37,29 @@ function addMessageToUi(isOwnMessage, data) {
       </li>
     `
   }
+
+  scrollToBottom();
+}
+
+function sendMessage() {
+  if (!messageInput.value) {
+    return
+  }
+  console.log(messageInput.value)
+  const data = {
+    name: nameInput.value,
+    message: messageInput.value,
+    dateTime: new Date()
+  }
+
+  socket.emit('message', data);
+  addMessageToUi(true, data);
+  messageInput.value = '';
+  scrollToBottom();
+}
+
+function scrollToBottom() {
+  messageContainer.scrollTo(0, messageContainer.scrollHeight)
 }
 
 //To update total clients that connect
