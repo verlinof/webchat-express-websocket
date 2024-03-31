@@ -18,21 +18,26 @@
     <div class="main">
       <div class="name">
         <span><i class="fa-solid fa-user"></i></span>
-        <input type="text" id="name-input" value="anonymous" maxlength="20" />
+        <input
+          type="text"
+          class="name-input"
+          id="name-input"
+          value="anonymous"
+          maxlength="20"
+        />
       </div>
-
       <ul class="message-container" id="message-container">
-        <li class="message-left">
+        <!-- <li class="message-left">
           <p class="message">
             Hello
-            <span>bluebird 26 july 10:30</span>
+            <span><b>bluebird</b> 26 july 10:30</span>
           </p>
         </li>
         <li class="message-right">
           <p class="message">
             Hello
-            <span>bluebird 26 july 10:30</span>
-          </p>
+            <span><b>bluebird</b> 26 july 10:30</span>
+          </p> -->
         </li>
         <li class="message_feedback">
           <p class="feedback" id="feedback">Killer is typing a message</p>
@@ -46,6 +51,10 @@
         </button>
       </form>
     </div>
-    <h3 class="clients-total" id="client-total">Total clients: 2</h3>
+    <h3 class="clients-total" id="client-total">Total clients: 0</h3>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    <script src="main.js"></script>
   </body>
 </html>
