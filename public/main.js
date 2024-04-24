@@ -1,4 +1,4 @@
-const socket = io();
+const socket = require("socket.io")(server);
 
 const clientsTotal = document.getElementById('client-total')
 const messageContainer = document.getElementById('message-container')
