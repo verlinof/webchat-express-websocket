@@ -23,6 +23,3 @@ jobs:
 
       - name: Start Express and Socket.IO server
         run: npm install pm2 -g && pm2 start app.js --name "webchat"
-
-      - name: Keep GitHub Actions alive
-        run: sleep infinity
