@@ -3,7 +3,7 @@ version: "3.3"
 # Untuk meletakkan aplikasinya dimana
 services:
   app:
-    container_name: "syncpos-be"
+    container_name: "webchat"
     build: .
     # Tempat menyimpan data
     volumes:
