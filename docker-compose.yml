@@ -1,0 +1,20 @@
+version: "3.3"
+
+# Untuk meletakkan aplikasinya dimana
+services:
+  app:
+    container_name: "webchat"
+    build: .
+    # Tempat menyimpan data
+    volumes:
+      - .:/app
+      - node_modules:/app/node_modules
+    ports:
+      - 7314:7314
+    stdin_open: true
+    environment:
+      - PORT=7314
+    command: npm start
+
+volumes:
+  node_modules:
