@@ -31,3 +31,9 @@ Step 3: Start the chat app
 ```bash
 npm run start
 ```
+
+Or
+
+```bash
+docker compose up
+```
